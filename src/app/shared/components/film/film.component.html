@@ -1,0 +1,14 @@
+<div class="card" [ngStyle]="{'background-color': color}" appMyShadow [fgShadow]="green" [bgShadow]="red">
+  <img class="card-img-top" [src]="data.image" [alt]="data.name">
+  <div class="card-block">
+    <a [href]="data.imdbUrl">
+    <h4 class="card-title">{{data.name | capitalizeFirst }}</h4>
+    </a>
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item" [ngStyle]="{'background-color': color}">Genero: {{data.gender}}</li>
+  </ul>
+  <div class="card-block">
+    <a href="#" class="btn btn-primary" (click)="eliminarFilm()">Eliminar</a>
+  </div>
+</div>
